@@ -3,53 +3,52 @@ const mongoose = require("mongoose")
 const pubSchema = mongoose.Schema({
     name: {
         type: String,
-        // required: [true, "Please add the publisher name"],
+        required: [true, "Please add the publisher name"],
     },
     dob: {
         type: String,
-        // required: [true, "Please provide date of birth"],
+        required: [true, "Please provide date of birth"],
     },
     dim: {
         type: String,
-        // required: [true, "Please provide date immersed"],
-    },
-    group: {
-        type: Number,
-        // required: [true, "Please add pub to a group"],
     },
     sex: {
         type: String,
-        // required: [true],
+        required: [true],
     },
     hope: {
         type: String,
-        // required: [true, "Please chose pub hope"],
+        required: [true, "Please choose pub hope"],
     },
     group: {
         type: Number,
-        // required: [true, "Please add pub to a group"],
+        required: [true, "Please add pub to a group"],
     },
     privilege: {
         type: String,
     },
-    pub_contact: {
-        phone: {
-            type: String,
-        },
-        home: {
-            type: String,
-        },
+    pioneer: {
+        type: String,
     },
-    Emergency_contact: {
-        name: {
-            type: String,
-        },
-        phone: {
-            type: String,
-        },
-        home: {
-            type: String,            
-        },
+    pub_address: {
+        type: String,
+        required: [true, "Please add pub Address"],
+    },
+    pub_phone: {
+        type: String,
+        required: [true, "Please add pub phone"],
+    },
+    emergency_name: {
+        type: String,
+        required: [true, "Please add pub emergency contact Person"],
+    },
+    emergency_address: {
+        type: String,
+        required: [true, "Please add pub emergency contact Person address"],
+    },
+    emergency_phone: {
+        type: String,
+        required: [true, "Please add pub emergency contact Person phone"],
     },
 }, {
     timestamps: true

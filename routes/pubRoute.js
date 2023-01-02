@@ -4,7 +4,7 @@ const router = express.Router()
 const { getPubs, addPub, updatePub, movedPub, group, getGroupPubs, deleteAll} = require("../controller/pubController")
 
 
-router.get(`/`, getPubs)
+router.get(`/allpubs`, getPubs)
 router.post(`/addpub`, addPub)
 router.put(`/updatepub/:id`, updatePub)
 router.get(`/group`, group)
